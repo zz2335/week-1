@@ -34,7 +34,7 @@ class Player:
         # before return the statement, make sure to either add or subtract the stake from the player's pot so that
         # the 'pot' variable tracks the player's money
         
-        if playerCard < dealerCard:
+        if self.lastCard < dealerCard:
             self.pot -= gameStake
             return 'player' + str(self.playerID) + 'Lose,' + str(self.lastCard) + 'vs' + str(dealerCard)
         else:
